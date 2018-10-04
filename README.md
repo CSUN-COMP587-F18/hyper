@@ -94,3 +94,19 @@ If you have issues in the `codesign` step when running `yarn run dist` on macOS,
 - [Sample Extension](https://github.com/zeit/hyperpower)
 - [Sample Theme](https://github.com/zeit/hyperyellow)
 - [Awesome Hyper](https://github.com/bnb/awesome-hyper)
+
+
+# COMP 587 Project Notes
+
+###COMPLETE:
+
+- Set up Electron Dev Environment
+
+###IN PROGRESS:
+
+- Understand how Electron compiles the Web code to a native app.
+
+###TO DO:
+- Understand how the Unix terminal is being accessed by the Java script
+- Understand where the updater checks for changes
+- Review API documentation
