@@ -101,12 +101,7 @@ If you have issues in the `codesign` step when running `yarn run dist` on macOS,
 ###COMPLETE:
 
 - Set up Electron Dev Environment
-
-###IN PROGRESS:
-
 - Understand how Electron compiles the Web code to a native app.
-
-###TO DO:
 - Understand how the Unix terminal is being accessed by the Java script
 - Understand where the updater checks for changes
 - Review API documentation
