@@ -78,7 +78,7 @@ module.exports = (commandKeys, execCommand) => {
       },
       {
         role: 'togglefullscreen',
-        accelerator: commandKeys['window:toggleFullScreen']
+        accelerators: commandKeys['window:toggleFullScreen']
       }
     ]
   };

@@ -1,4 +1,4 @@
-![](https://assets.zeit.co/image/upload/v1537650716/repositories/hyper/hyper-repo-banner.png)
+![](https://github.com/zeit/art/blob/525bd1bb39d97dd3b91c976106a6d5cc5766b678/hyper/repo-banner.png)
 
 [![macOS CI Status](https://circleci.com/gh/zeit/hyper.svg?style=shield)](https://circleci.com/gh/zeit/hyper)
 [![Windows CI status](https://ci.appveyor.com/api/projects/status/kqvb4oa772an58sc?svg=true)](https://ci.appveyor.com/project/zeit/hyper)
@@ -63,7 +63,6 @@ Regardless of the platform you are working on, you will need to have Yarn instal
 5. To run `hyper`
   * `yarn run app` from another terminal tab/window/pane
   * If you are using **Visual Studio Code**, select `Launch Hyper` in debugger configuration to launch a new Hyper instance with debugger attached.
-  * If you interrupt `yarn run dev`, you'll need to relaunch it each time you want to test something. Webpack will watch changes and will rebuild renderer code when needed (and only what have changed). You'll just have to relaunch electron by using yarn run app or VSCode launch task.
 
 To make sure that your code works in the finished application, you can generate the binaries like this:
 

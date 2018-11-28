@@ -127,6 +127,9 @@ module.exports = class Window {
       const session = sessions.get(uid);
       if (session) {
         session.exit();
+      } else {
+        //eslint-disable-next-line no-console
+        console.log('session not found by', uid);
       }
     });
     rpc.on('unmaximize', () => {
@@ -140,22 +143,19 @@ module.exports = class Window {
     });
     rpc.on('resize', ({uid, cols, rows}) => {
       const session = sessions.get(uid);
-      if (session) {
-        session.resize({cols, rows});
-      }
+      session.resize({cols, rows});
     });
     rpc.on('data', ({uid, data, escaped}) => {
       const session = sessions.get(uid);
-      if (session) {
-        if (escaped) {
-          const escapedData = session.shell.endsWith('cmd.exe')
-            ? `"${data}"` // This is how cmd.exe does it
-            : `'${data.replace(/'/g, `'\\''`)}'`; // Inside a single-quoted string nothing is interpreted
 
-          session.write(escapedData);
-        } else {
-          session.write(data);
-        }
+      if (escaped) {
+        const escapedData = session.shell.endsWith('cmd.exe')
+          ? `"${data}"` // This is how cmd.exe does it
+          : `'${data.replace(/'/g, `'\\''`)}'`; // Inside a single-quoted string nothing is interpreted
+
+        session.write(escapedData);
+      } else {
+        session.write(data);
       }
     });
     rpc.on('open external', ({url}) => {

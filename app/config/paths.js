@@ -36,7 +36,6 @@ const plugs = {
 };
 const yarn = resolve(__dirname, '../../bin/yarn-standalone.js');
 const cliScriptPath = resolve(__dirname, '../../bin/hyper');
-const cliLinkPath = '/usr/local/bin/hyper';
 
 const icon = resolve(__dirname, '../static/icon96x96.png');
 
@@ -67,6 +66,5 @@ module.exports = {
   defaultPlatformKeyPath,
   plugs,
   yarn,
-  cliScriptPath,
-  cliLinkPath
+  cliScriptPath
 };

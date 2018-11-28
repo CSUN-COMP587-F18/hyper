@@ -15,7 +15,9 @@ const _syntaxValidation = function(cfg) {
   try {
     return new vm.Script(cfg, {filename: '.hyper.js', displayErrors: true});
   } catch (err) {
-    notify('Error loading config:', `${err.name}, see DevTools for more info`, {error: err});
+    notify('Error loading config:', `${err.name}, see DevTools for more info`);
+    //eslint-disable-next-line no-console
+    console.error('Error loading config:', err);
   }
 };
 

@@ -27,13 +27,9 @@ app.on('ready', () => {
   });
 });
 
-function notify(title, body, details = {}) {
+function notify(title, body) {
   //eslint-disable-next-line no-console
   console.log(`[Notification] ${title}: ${body}`);
-  if (details.error) {
-    //eslint-disable-next-line no-console
-    console.error(details.error);
-  }
   if (win) {
     win.webContents.send('notification', {title, body});
   } else {

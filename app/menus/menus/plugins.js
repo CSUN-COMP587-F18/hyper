@@ -1,4 +1,4 @@
-module.exports = (commands, execCommand) => {
+module.exports = (commands, update) => {
   return {
     label: 'Plugins',
     submenu: [
@@ -6,17 +6,8 @@ module.exports = (commands, execCommand) => {
         label: 'Update',
         accelerator: commands['plugins:update'],
         click() {
-          execCommand('plugins:update');
+          update();
         }
-      },
-      {
-        label: 'Install Hyper CLI command in PATH',
-        click() {
-          execCommand('cli:install');
-        }
-      },
-      {
-        type: 'separator'
       }
     ]
   };
